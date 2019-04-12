@@ -10,7 +10,6 @@ use DevWorkout\Bothound\Models\BothoundIp;
 class BothoundClass
 {
     protected $userAgents;
-
     protected $referers;
 
     public function __construct()
