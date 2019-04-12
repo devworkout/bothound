@@ -8,12 +8,19 @@ You can install the package via composer:
 
 ```bash
 composer require devworkout/bothound
+php artisan migrate
 ```
 
 ## Usage
 
 ``` php
-// Work In Progress
+
+        // Check User Agent, Referer, IP
+        if ( $networkName = app( 'bothound' )->identifyBot( $userAgent, $referer, $ip ) )
+        {
+            dd($networkName);
+        }
+
 ```
 
 ### Testing
