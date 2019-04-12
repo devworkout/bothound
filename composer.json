@@ -1,0 +1,53 @@
+{
+  "name": "devworkout/bothound",
+  "description": "",
+  "keywords": [
+    "devworkout",
+    "bothound"
+  ],
+  "homepage": "https://github.com/devworkout/bothound",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladislav Novik",
+      "email": "librevlad@gmail.com",
+      "homepage": "https://serpentine.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "laravel/framework": "5.*"
+  },
+  "require-dev": {
+    "larapack/dd": "^1.0",
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DevWorkout\\Bothound\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DevWorkout\\Bothound\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DevWorkout\\Bothound\\BothoundServiceProvider"
+      ],
+      "aliases": {
+        "Bothound": "DevWorkout\\Bothound\\BothoundFacade"
+      }
+    }
+  }
+}
