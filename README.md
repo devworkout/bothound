@@ -20,8 +20,18 @@ php artisan migrate
         {
             dd($networkName);
         }
+        
+        app('bothound')->rememberBot('1.2.3.4','facebook');
 
 ```
+
+In Console Kernel:
+```php
+
+$schedule->command( 'bothound:optimize' )->daily();
+
+```
+
 
 ### Testing
 

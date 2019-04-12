@@ -55,6 +55,10 @@ class BothoundClass
         return $default;
     }
 
+    public function rememberBot( $ip, $network )
+    {
+        return BothoundIp::firstOrCreate( compact( 'ip', 'network' ) );
+    }
 
     public function identifyBot( $userAgent = null, $referer = null, $ip = null, $default = null )
     {
