@@ -2,6 +2,7 @@
 
 namespace DevWorkout\Bothound;
 
+use DevWorkout\Bothound\Console\Commands\Optimize;
 use Illuminate\Support\ServiceProvider;
 
 class BothoundServiceProvider extends ServiceProvider
@@ -21,6 +22,7 @@ class BothoundServiceProvider extends ServiceProvider
                 __DIR__ . '/../database/migrations',
             ] );
 
+            $this->commands( Optimize::class );
         }
     }
 

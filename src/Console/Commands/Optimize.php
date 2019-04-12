@@ -1,11 +1,7 @@
 <?php
 
-namespace App\Console\Commands;
+namespace DevWorkout\Bothound\Console\Commands;
 
-use App\Models\Card;
-use App\Models\Click;
-use App\Models\KnownBotIp;
-use App\Models\User;
 use DevWorkout\Bothound\Models\BothoundIp;
 use Illuminate\Console\Command;
 
@@ -37,8 +33,6 @@ class Optimize extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return mixed
      */
     public function handle()
     {

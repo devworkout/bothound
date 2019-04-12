@@ -9,17 +9,15 @@ use DevWorkout\Bothound\Models\BothoundIp;
 
 class BothoundClass
 {
-    protected $userAgents = [
-        'linkedin' => [ 'linkedin' ],
-        'facebook' => [ 'facebookexternalhit', '/FB' ],
-        'google'   => [ 'developers.google.com' ],
-        'twitter'  => [ 'Twitterbot', 'AhrefsBot', 'GTB', 'Applebot' ],
-    ];
+    protected $userAgents;
 
-    protected $referers = [
-        // Facebook bots use this referer when checking your link
-        'facebook' => [ 'l.facebook.com' ],
-    ];
+    protected $referers;
+
+    public function __construct()
+    {
+        $this->userAgents = config( 'bothound.user_agents' );
+        $this->referers = config( 'bothound.referers' );
+    }
 
     public function identifyByUserAgent( $userAgent = null, $default = null )
     {
