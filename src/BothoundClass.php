@@ -80,7 +80,7 @@ class BothoundClass
 
     public function identifyByIp( $ip )
     {
-        return BothoundIp::where( 'ip', $ip )->orWhere( 'ip', $this->ip( $ip )->subnet()->mask() )->first()->network;
+        return optional(BothoundIp::where( 'ip', $ip )->orWhere( 'ip', $this->ip( $ip )->subnet()->mask() )->first())->network;
     }
 
     // Atlas
