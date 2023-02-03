@@ -16,8 +16,8 @@
     }
   ],
   "require": {
-    "php": "^7.1",
-    "laravel/framework": "5.*"
+    "php": "^7.1|8.*",
+    "laravel/framework": "5.*|9.*"
   },
   "require-dev": {
     "larapack/dd": "^1.0",
